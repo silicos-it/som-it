@@ -1,0 +1,61 @@
+INTRODUCTION AND REQUIREMENTS
+
+General:
+========
+
+The following tools are required to compile Som-it:
+
+	- A C++ compiler (like g++) 
+	- A makefile system (like GNU make) 
+
+If you want to install globally on your system, you will need root access, and should follow these instructions.
+
+
+For building under Linux and OS X:
+=================================
+
+INSTALL GLOBALLY (YOU NEED ROOT ACCESS)
+
+(1) Open a command window, and decompress the downloaded file with following command:
+
+> tar -xvf som-it-1.0.1.tar.gz
+
+This will create a folder called 'som-it-1.0.1'. 
+
+(2) You now need to configure and compile Som-it:
+
+> cd som-it-1.0.1
+> make
+
+(3) If you have root permissions, you can install Som-it globally. As root, run the following command:
+
+> make install
+> make clean
+
+Open the file 'som-it.R' with your favorite editor and specify the location of the installed 'som-it' executable.
+You can find this location within the 'project.matrix.on.som' function of the 'som-it.R' file.
+
+
+Specific notes for building under Windows:
+==========================================
+
+(1) Install cygwin (http://cygwin.com/install.html) and mingw-make (http://cs.nyu.edu/rgrimm/teaching/fa07-oop/windows-make.html)
+
+(2) Open a command window, and decompress the downloaded file with following command:
+
+> tar -xvf som-it-1.0.1.tar.gz
+
+This will create a folder called 'som-it-1.0.1'. Move into that directory.
+
+(3) With cygwin's g++ as C++ compiler, find the following line in 'Makefile':
+
+CC = /usr/bin/g++
+
+and replace it with:
+
+CC = g++
+
+Then follow the instructions for building under Linux and OS X (from point 2 on).
+
+
+
